@@ -191,6 +191,7 @@ Looking forward to your pull request.
 
 ## Acknowledgements
 Thanks for all the [contributors](https://github.com/DonQvixote/maupassant-hexo/graphs/contributors) of this theme.
+
 ## Maupassant on other platforms:
 + Typecho：https://github.com/pagecho/maupassant/
 + Octopress：https://github.com/pagecho/mewpassant/
