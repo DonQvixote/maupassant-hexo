@@ -1,5 +1,17 @@
-if theme.duoshuo
-  .ds-thread(data-thread-key=page.path, data-title=page.title, data-url=page.permalink, data-author-key='1')
+if theme.gitment.enable == true
+    #container
+    link(rel='stylesheet', href=url_for(theme.css) + '/default.css' + '?v=' + theme.version)
+    script(src=url_for(theme.js) + '/gitment.browser.js' + '?v=' + theme.version)
+    script.
+      var gitment = new Gitment({
+        owner: '#{theme.gitment.owner}',
+        repo: '#{theme.gitment.repo}',
+        oauth: {
+          client_id: '#{theme.gitment.client_id}',
+          client_secret: '#{theme.gitment.client_secret}',
+        },
+      })
+      gitment.render('container')
 
 if theme.disqus
   #disqus_thread
@@ -19,7 +31,7 @@ if theme.disqus
         $('.btn_click_load').css('display','none');
       });
       $.ajax({
-        url: 'https://disqus.com/favicon.ico',
+        url: 'https://disqus.com/next/config.json',
         timeout: 3000,
         type: 'GET',
         success: (function() {
@@ -38,17 +50,19 @@ if theme.uyan
   #uyan_frame
   script(type='text/javascript' src='http://v2.uyan.cc/code/uyan.js?uid=#{theme.uyan}')
 
-if theme.gentie
-  .cloud-tie-wrapper#cloud-tie-wrapper
-  script.
-    var cloudTieConfig = {
-      url: document.location.href,
-      productKey: "#{theme.gentie}",
-      target: "cloud-tie-wrapper"
-    };
-  script(src='https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js')
-
 if theme.changyan
   div#SOHUCS(sid=page.date.valueOf())
   script.
     (function(){var appid='#{theme.changyan}';var conf='#{theme.changyan_conf}';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>')}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})})}})()
+
+if theme.livere
+  div(id='lv-container' data-id='city' data-uid='#{theme.livere}')
+    script.
+      (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+      })(document, 'script');

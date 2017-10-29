@@ -1,10 +1,15 @@
 fancybox: true ## If you want to use fancybox please set the value to true.
-duoshuo: ## Your duoshuo_shortname, e.g. username
 disqus: ## Your disqus_shortname, e.g. username
+gitment:
+  enable: false ## If you want to use Gitment comment system please set the value to true.
+  owner: ## Your GitHub ID, e.g. username
+  repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. imsun.github.io
+  client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
 uyan: ## Your uyan_id. e.g. 1234567
-gentie: ## Your gentie_productKey, e.g. fc799538c7ad4cf5a5a0c2877a90cbd7
-changyan: ## Your changyan appid
-changyan_conf: ## You changyan conf
+livere: ## Your livere data-uid, e.g. MTAyMC8zMDAxOC78NTgz
+changyan: ## Your changyan appid, e.g. cyrALsXc8
+changyan_conf: ## You changyan conf, e.g. prod_d8a508c2825ab57eeb43e7c69bba0e8b
 google_search: true ## Use Google search, true/false.
 baidu_search: ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
@@ -18,6 +23,20 @@ shareto: true ## If you want to use the share button please set the value to tru
 busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
 widgets_on_small_screens: false ## Set to true to enable widgets on small screens.
 make_maupassant_great_again: true ## Set to true to enable better experience on mobile devices.
+canvas_nest:
+  enable: false ## If you want to use dynamic background please set the value to true, you can also fill the following parameters to customize the dynamic effect, or just leave them blank to keep the default effect.
+  color: ## RGB value of the color, e.g. "100,99,98"
+  opacity: ## Transparency of lines, e.g. "0.7"
+  zIndex: ## The z-index property of the background, e.g. "-1"
+  count: ## Quantity of lines, e.g. "150"
+donate:
+  enable: false ## If you want to show the donate button after each post, please set the value to true and fill the following items according to your need. You can also enable donate button in a page by adding a "donate: true" item to the front-matter.
+  github: ## GitHub URL, e.g. https://github.com/Kaiyuan/donate-page
+  alipay_qr: ## Path of Alipay QRcode image, e.g. /img/AliPayQR.png
+  wechat_qr: ## Path of Wechat QRcode image, e.g. /img/WeChatQR.png
+  btc_qr: ## Path of Bitcoin QRcode image, e.g. /img/BTCQR.png
+  btc_key: ## Bitcoin key, e.g. 1KuK5eK2BLsqpsFVXXSBG5wbSAwZVadt6L
+  paypal_url: ## Paypal URL, e.g. https://paypal.me/tufu9441
 
 menu:
   - page: home
@@ -64,4 +83,4 @@ js: js
 css: css
 
 # Theme version
-version: 0.0.0
+version: 2.0.1
